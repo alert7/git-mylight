@@ -1,0 +1,110 @@
+/*.img_light{
+    height: 564px;
+    width: 100%;
+    position: absolute;
+}*/
+.mainer{
+    height: 564px;
+    width: 100%;
+    background: url("../images/room_off.jpg") no-repeat center;
+    background-size: 100% 100%;
+    position: relative;
+}
+/*#main-light{
+    height: 564px;
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    border-bottom-right-radius: 5px;
+    !*background:url(img/room_off.jpg);
+    background-size:980px 598px;*!
+    !*background-size: contain;
+    background-repeat:no-repeat;*!
+}*/
+#switch-light{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+/*开关的轮廓*/
+.switch-light{
+    display: block;
+    position: relative;
+    width:100px;
+    height:120px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+.switch-light2{
+    display: block;
+    position: relative;
+    width:100px;
+    height:120px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+.indicate{
+    display: block;
+    position: absolute;
+    margin:35px 0 0 40px;
+    width: 20px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #A8C1C2;
+    z-index: 1;
+    transition: all 200ms;
+}
+.indicate_yes{
+    margin:39px 0 0 40px;
+    background-color: #A3D7E7;
+}
+/*开关内部的小按钮*/
+.switch-light:after{
+    display: block;
+    position: absolute;
+    top:20px;
+    bottom: 20px;
+    left:10px;
+    right:10px;
+    border:1px solid #FFF;
+    transition: all 200ms;
+}
+.switch-light2:after{
+    display: block;
+    position: absolute;
+    top:29px;
+    bottom: 11px;
+    left:10px;
+    right:10px;
+    border:1px solid #FFF;
+    transition: all 200ms;
+}
+/*默认状态的小按钮*/
+.light-on:after {
+    content: '';
+    border-radius: 5px;
+    /*border:1px solid #FFF;*/
+    background: linear-gradient(#fff, #f2f2f2 80%,#fff);
+    box-shadow: 0 1px 0 0 #fff,
+    0 3px 0.5px 0 #E7E9EA,
+    0 5px 0.5px 0 #DEDFDF,
+    0 6px 0.5px 0 #CCCCCD,
+    0 7px 0.5px 0 #C5C7C7,
+    0 8px 2px 0 #818283,
+    0 9px 2px 0 #A7A8A8;
+}
+
+/*关闭后的小按钮*/
+.light-off:after {
+    content: '';
+    border-radius: 5px;
+    /*border:1px solid #FFF;*/
+    background: linear-gradient(#fff, #f2f2f2 80%,#fff);
+    box-shadow: 0 -1px 0 0 #fff,
+    0 -3px 0.5px 0 #E7E9EA,
+    0 -5px 0.5px 0 #DEDFDF,
+    0 -6px 0.5px 0 #CCCCCD,
+    0 -7px 0.5px 0 #C5C7C7,
+    0 -8px 2px 0 #818283,
+    0 -9px 2px 0 #A7A8A8;
+}

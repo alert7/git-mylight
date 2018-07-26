@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+   <main>
+        <form class="form">
+            <div class="form__cover"></div>
+            <div class="form__loader">
+                <div class="spinner active">
+                    <svg class="spinner__circular" viewBox="25 25 50 50">
+                        <circle class="spinner__path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"></circle>
+                    </svg>
+                </div>
+            </div>
+            <div class="form__content">
+                <h1>校园路灯控制系统</h1>
+                <div class="styled-input">
+                    <!--输入输入用户名-->
+                    <input type="text" class="styled-input__input" name="nickname">
+                    <div class="styled-input__placeholder">
+                        <span class="styled-input__placeholder-text">Username</span>
+                    </div>
+                    <div class="styled-input__circle"></div>
+                </div><div class="styled-input">
+                            <!--输入密码-->
+                     <input type="text" class="styled-input__input">
+                    <div class="styled-input__placeholder">
+                        <span class="styled-input__placeholder-text">Password</span>
+                    </div>
+                    <div class="styled-input__circle"></div>
+                </div>
+                <!--点击登录-->
+                <a href="index.html" id="form">
+                    <button type="button" class="styled-button">
+                        <span class="styled-button__real-text-holder">
+                            <span class="styled-button__real-text">登录</span>
+                            <span class="styled-button__moving-block face">
+                                <span class="styled-button__text-holder">
+                                    <span class="styled-button__text">登录</span>
+                                </span>
+                            </span>
+                            <span class="styled-button__moving-block back">
+                                <span class="styled-button__text-holder">
+                                    <span class="styled-button__text">登录</span>
+                                </span>
+                            </span>
+                        </span>
+                    </button>
+                </a>
+            </div>
+
+        </form>
+    </main>
+  
+    <script  src="scripts/login.js"></script>
+
+</body>
+</html>
+<script>
+    function init(){
+
+        //验证登录 没写完
+        $("#form").submit( function(event) {
+            var account = $(".styled-input__input").val();
+            var pwd = $(".styled-input__input").val();
+            if (account.length === 0){
+                alert("用户名或密码为空！")
+            }
+            if (!account || !pwd) {
+                alert("密码或用户名错误");
+                return false;
+            }else{
+                // $("").attr("href", "login.html");
+            }
+        });
+    }
+</script>
